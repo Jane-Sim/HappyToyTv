@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">HappytoyTv</string>
+    <string name="exo_controls_previous_description">Previous track</string>
+    <string name="exo_controls_next_description">Next track</string>
+    <string name="exo_controls_pause_description">Pause</string>
+    <string name="exo_controls_play_description">Play</string>
+    <string name="exo_controls_stop_description">Stop</string>
+    <string name="exo_controls_rewind_description">Rewind</string>
+    <string name="exo_controls_fastforward_description">Fast forward</string>
+    <string name="directions_base_url">https://maps.googleapis.com/</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyBMq0Xw6NkAShD9UuIVCmvLf8Ybg7eYqNQ</string>
+</resources>

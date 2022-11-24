@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_shadow_start_color"
+    tools:context="com.example.seyoung.happytoytv.main.MainActivity">
+    <LinearLayout
+        android:id="@+id/toplinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/black"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:weightSum="10"
+        tools:ignore="RtlCompat">
+
+        <EditText
+            android:id="@+id/autoCompleteTextView"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/cardview_light_background"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="8"
+            android:gravity="left|center"
+            android:hint="ex) 콩순이"
+            android:textStyle="bold"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+        <ImageView
+            android:id="@+id/clear"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:src="@drawable/closebutton"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/cardview_light_background"
+            tools:ignore="RtlHardcoded" />
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/maps"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_weight="1"
+            android:scaleType="center"
+            android:src="@drawable/map_location" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/line"
+        android:layout_below="@id/toplinear"
+        android:background="@color/feed_bg"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:gravity="start"
+        android:textStyle="bold"
+        android:text=""/>
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@id/line"
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="2dp"
+        android:visibility="gone"
+        android:background="@color/cardview_light_background"
+        tools:ignore="UnusedAttribute">
+    </android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/nulltext"
+        android:visibility="visible"
+        android:layout_below="@id/line"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="@color/cardview_light_background"
+        android:text="궁금한 장난감을 검색해보세요" />
+
+</RelativeLayout>

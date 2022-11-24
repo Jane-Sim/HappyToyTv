@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e1e1e1"
+    android:orientation="vertical"
+    android:weightSum="12"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/mainbar"
+        android:layout_height="0dp"
+        android:background="#f2f1f1"
+        android:padding="10dp"
+        android:layout_marginBottom="2dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        >
+
+        <ImageButton
+            android:id="@+id/imagestream2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:background="#f2f1f1"
+            android:visibility="gone"
+            app:srcCompat="@drawable/facetime" />
+        <ImageButton
+            android:id="@+id/imagestream"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:scaleType="center"
+            android:padding="60dp"
+            android:onClick="onClick"
+            android:visibility="visible"
+            android:background="@drawable/facetime"
+           />
+        <TextView
+            android:id="@+id/thrtext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:visibility="gone"
+            android:text="여러가지 기능을 경험해봐요!"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="9.8"
+        android:background="#ffffffff">
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btBroadCaster"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Presenter"
+        android:visibility="gone"
+        />
+
+    <Button
+        android:id="@+id/btViewer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Viewer"
+        android:visibility="gone"
+        />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.2"
+        android:background="#f2f1f1"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:layout_marginTop="3dp"
+        android:weightSum="4">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="#f2f1f1">
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="30dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/selector_one"
+                android:scaleType="centerInside" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="라이브"
+                android:textSize="10sp"
+                android:textColor="@android:color/background_dark"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:onClick="onClick"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="#f2f1f1">
+
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="40dp"
+                android:layout_height="25dp"
+                android:scaleType="centerInside"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="7dp"
+                android:layout_gravity="center"
+                android:background="@drawable/selector_two"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="VOD"
+                android:textSize="10sp"
+                android:textColor="@android:color/background_dark"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:onClick="onClick"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="#f2f1f1">
+
+            <ImageButton
+                android:id="@+id/imageButton3"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:scaleType="centerCrop"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center"
+                android:background="@drawable/selector_four"
+             />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="모아보기"
+                android:textSize="10sp"
+                android:textColor="@android:color/background_dark"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:onClick="onClick"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="#f2f1f1">
+
+            <ImageButton
+                android:id="@+id/imageButton4"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:scaleType="centerInside"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="7dp"
+                android:layout_gravity="center"
+                android:background="@drawable/selector_five"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="내정보"
+                android:textSize="10sp"
+                android:textColor="@android:color/background_dark"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:onClick="onClick"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

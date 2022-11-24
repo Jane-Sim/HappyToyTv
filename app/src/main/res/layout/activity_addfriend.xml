@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_light_background"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    >
+    <LinearLayout
+        android:id="@+id/uptext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:src="@drawable/ic_arrow_back_black_24dp" />
+
+        <TextView
+            android:id="@+id/tastename"
+            android:layout_width="wrap_content"
+            android:layout_weight="4"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="그룹통화 친구 추가"
+            android:textColor="@android:color/background_dark"
+            android:textSize="20sp" />
+        <Button
+            android:id="@+id/startcall"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:text="영상통화 시작"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/li"
+        android:padding="10dp"
+        android:layout_below="@+id/uptext"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/response"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:text="결과값이 없습니다."
+        android:textColor="@color/cardview_dark_background"
+        android:visibility="gone"
+        android:background="@color/cardview_light_background"
+       />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cardview_light_background"
+        >
+    </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+</RelativeLayout>

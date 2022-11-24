@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="5dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+            <FrameLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                >
+                <ImageView
+                    android:id="@+id/p_image"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    />
+
+            </FrameLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/p_name"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="40dp"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="20sp"
+            android:text="유저의 이름"/>
+        <Button
+            android:id="@+id/walletbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="지갑 생성하기"
+            android:onClick="onClick"
+            android:textColor="@color/white"
+            android:background="@drawable/imground"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+
+        <ImageButton
+            android:id="@+id/gowallet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/purse"
+            android:background="@color/white"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

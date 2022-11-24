@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical"
+    >
+
+    <org.webrtc.SurfaceViewRenderer
+        android:id="@+id/vGLSurfaceViewCall"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:windowSoftInputMode="adjustNothing"
+        />
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                tools:context="com.example.seyoung.happytoytv.main.ChatRoomActivity">
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/live"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <View
+                    android:id="@+id/splitView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    app:layout_constraintHeight_percent="0.6"
+                    app:layout_constraintBottom_toTopOf="@id/chatRoomrecycler"
+                    android:alpha="0"
+                    />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/chatRoomrecycler"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.4"
+            android:background="@android:color/transparent"
+            app:layout_constraintBottom_toTopOf="@id/bottomMsgLayout"
+            >
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/chatRoomListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:id="@+id/bottomMsgLayout"
+                    android:layout_width="match_parent"
+                    android:alpha="0.5"
+                    android:background="@android:color/background_dark"
+                    android:layout_height="45dp">
+
+                    <ImageView
+                        android:id="@+id/addPhotoImgView"
+                        android:layout_width="41dp"
+                        android:layout_height="40dp"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_add_black_24dp"
+                        app:layout_constraintEnd_toStartOf="@+id/msgEditText"
+                        app:layout_constraintStart_toStartOf="@+id/bottomMsgLayout"
+                        tools:layout_editor_absoluteY="-1dp"
+                        tools:ignore="MissingConstraints" />
+                    <EditText
+                        android:labelFor="@+id/msgEditText"
+                        android:id="@+id/msgEditText"
+                        android:hint="메세지를 입력해보세요"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@color/feed_bg"
+                        app:layout_constraintEnd_toStartOf="@id/sendMsgBtn"
+                        app:layout_constraintStart_toEndOf="@+id/addPhotoImgView"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent" />
+
+                    <ImageButton
+                        android:id="@+id/sendMsgBtn"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="4dp"
+                        android:scaleType="fitCenter"
+                        app:layout_constraintEnd_toEndOf="@id/bottomMsgLayout"
+                        app:layout_constraintStart_toEndOf="@id/msgEditText"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/direct"
+                        tools:ignore="ContentDescription,MissingConstraints" />
+                </android.support.constraint.ConstraintLayout>
+            </android.support.constraint.ConstraintLayout>
+</FrameLayout>
+</LinearLayout>
+

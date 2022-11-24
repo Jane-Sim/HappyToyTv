@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#111d2d"
+    android:orientation="vertical"
+    android:layout_width="300dp"
+    android:paddingBottom="10dp"
+    android:layout_height="wrap_content">
+
+    <!-- 타이틀바 -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="방 이름을 정해주세요."
+            android:textSize="15sp"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:background="#111d2d"
+            android:layout_width="match_parent"
+            android:layout_height="53dp" />
+    </LinearLayout>
+    <!-- //end 타이틀바 -->
+
+    <!-- Notice -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="0.8"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <EditText
+            android:id="@+id/txtText"
+            android:maxLines="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:alpha="1"
+            android:gravity="center"
+            android:text="친구들 오늘도 함께해요~~"
+            android:textColor="#fff"
+            android:textSize="15sp"
+            android:background="#1a2e4c"
+            />
+    </LinearLayout>
+    <!-- Notice -->
+
+<!--
+    <View
+        android:background="#66bdbdbd"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+-->
+
+    <!-- 닫기 버튼 -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#1a2e4c"
+        android:weightSum="2"
+        >
+        <Button
+            android:text="확인"
+            android:textSize="15sp"
+            android:textColor="#fff"
+            android:padding="1dp"
+            android:paddingBottom="5dp"
+            android:background="#111d2d"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:onClick="mOnClose"
+            android:layout_margin="3dp"
+            android:layout_weight="1"/>
+        <Button
+            android:text="취소"
+            android:textSize="15sp"
+            android:textColor="#fff"
+            android:padding="1dp"
+            android:paddingBottom="5dp"
+            android:background="#111d2d"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:onClick="mOnFinish"
+            android:layout_margin="3dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <!--// 닫기 버튼 -->
+</LinearLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:layout_width="250dp"
+    android:paddingBottom="10dp"
+    android:layout_height="wrap_content">
+
+    <!-- 타이틀바 -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="모바일 지갑 비밀번호 설정"
+            android:textSize="15sp"
+            android:textColor="@color/zxing_custom_result_view"
+            android:gravity="center"
+            android:background="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="53dp" />
+    </LinearLayout>
+    <!-- //end 타이틀바 -->
+
+    <!-- Notice -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="0.8"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/txtText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="1"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:hint="비밀번호를 입력해주세요"
+            android:maxLines="1"
+            android:padding="5dp"
+            android:textColor="@android:color/background_dark"
+            android:textColorHint="@android:color/tertiary_text_light"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="2"
+        >
+
+        <Button
+            android:text="취소"
+            android:textSize="15sp"
+            android:textColor="#fff"
+            android:padding="1dp"
+            android:paddingBottom="5dp"
+            android:background="@color/colorPrimaryDark"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:onClick="mOnFinish"
+            android:layout_margin="3dp"
+            android:layout_weight="1"/>
+        <Button
+            android:text="확인"
+            android:textSize="15sp"
+            android:textColor="#fff"
+            android:padding="1dp"
+            android:paddingBottom="5dp"
+            android:background="@color/colorPrimaryDark"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:onClick="mOnClose"
+            android:layout_margin="3dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <!--// 닫기 버튼 -->
+</LinearLayout>
